@@ -1,0 +1,133 @@
+header.main-header {
+	width: 100%;
+	margin: 0;
+	position: fixed;
+	z-index: 3000;
+	background: rgba(228, 90, 78, 0);
+	@include transition(all, 0.5s, ease);
+
+	.logotype {
+		width: 150px;
+		margin: 25px;
+		float: left;
+		@include transition(all, 0.5s, ease);
+	}
+}
+
+header.active {
+	background: rgba(228, 90, 78, 1);
+
+	.logotype {
+		width: 110px;
+		margin: 10px 25px;
+	}
+
+	.toggle-button .toggle-menu {
+		margin: 10px 25px 0 0;
+	}
+}
+
+header.active-nav {
+	background: rgba(228, 90, 78, 0);
+
+	.logotype {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.toggle-button {
+
+	.toggle-menu {
+		width: 60px;
+		height: 58px;
+		position: relative;
+		z-index: 9000;
+		float: right;
+		margin: 25px 25px 0 0;
+		background-color: transparent;
+		border: none;
+		outline: 0;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+
+		.toggle-pin {
+			width: 90%;
+		  height: 5px;
+		  background: white;
+		  display: block;
+		  margin: 10px 0px;
+			border-radius: 5px;
+		}
+	}
+
+	.x {
+		.toggle-pin:nth-child(1) {
+			margin-top: 8px;
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			transform: rotate(45deg);
+			-webkit-transition: -webkit-transform .4s;
+			transition: transform .4s;
+		}
+
+		.toggle-pin:nth-child(2) {
+			opacity: 0;
+			-webkit-transition: opacity .3s;
+			transition: opacity .3s;
+		}
+
+		.toggle-pin:nth-child(3) {
+			margin-top: -30px;
+			-webkit-transform: rotate(-45deg);
+			-moz-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			-webkit-transition: -webkit-transform .4s;
+			transition: transform .4s;
+		}
+	}
+}
+
+.menu-hidden {
+	visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+
+.menu-show {
+	visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
+.navigation {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 8000;
+	background: rgba(228, 90, 78, 0.90);
+
+	ul {
+		li {
+			margin: 25px 0;
+			text-align: center;
+
+			> a {
+				color: white;
+			  font-size: 37px;
+			  text-transform: uppercase;
+			}
+		}
+
+		li.logo {
+			max-width: 300px;
+			margin: 25px auto;
+		}
+	}
+}

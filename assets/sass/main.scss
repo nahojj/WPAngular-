@@ -1,0 +1,22 @@
+/* Main view APP */
+.app {
+	width: 100%;
+}
+
+// Bower
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
+@import "bower_components/fontawesome/scss/font-awesome";
+
+// Partials
+@import "_partials/_reset";
+@import "_partials/_variables";
+@import "_partials/_buttons";
+// Mixin
+@import "_mixin/_mixin";
+// Layouts
+@import "_layouts/_header";
+@import "_layouts/_footer";
+// Pages
+@import "_layouts/_main";
+@import "_layouts/_post-type";
+@import "_layouts/_page-type";
